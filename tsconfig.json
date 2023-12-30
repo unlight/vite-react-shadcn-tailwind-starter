@@ -28,7 +28,10 @@
     "declarationMap": false,
     "skipLibCheck": true,
     "lib": ["DOM", "esnext"],
-    "paths": {},
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "plugins": [],
     "types": ["vitest/globals"]
   },

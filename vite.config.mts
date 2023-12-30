@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import path from 'path';
 import { defineConfig, ConfigEnv, UserConfigExport } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -13,6 +14,11 @@ export default function ({}: ConfigEnv): UserConfigExport {
       environment: 'happy-dom',
     },
     plugins: [tsconfigPaths(), reactRefresh()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
     build: {
       assetsDir: '.',
       // brotliSize: false,
