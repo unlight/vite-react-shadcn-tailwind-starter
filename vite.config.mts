@@ -7,7 +7,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default function ({}: ConfigEnv): UserConfigExport {
   return defineConfig({
     test: {
-      threads: false,
       reporters: 'dot',
       environment: 'happy-dom',
     },
