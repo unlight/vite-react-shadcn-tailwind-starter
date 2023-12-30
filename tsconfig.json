@@ -29,7 +29,8 @@
     "skipLibCheck": true,
     "lib": ["DOM", "esnext"],
     "paths": {},
-    "plugins": []
+    "plugins": [],
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }
