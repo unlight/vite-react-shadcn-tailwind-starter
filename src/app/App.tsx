@@ -7,7 +7,7 @@ import { HoverCardDemo } from './HoverCardDemo';
 export function App() {
   return (
     <React.StrictMode>
-      <main className="flex items-center justify-center min-h-screen">
+      <main className="flex min-h-screen items-center justify-center">
         <h4>Hello from app</h4>
         <HoverCardDemo />
       </main>

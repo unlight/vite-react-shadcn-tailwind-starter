@@ -20,6 +20,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:unicorn/recommended',
     'plugin:import/recommended',
+    'plugin:tailwindcss/recommended',
     'plugin:etc/recommended',
     'plugin:promise/recommended',
     'plugin:prettier/recommended',
@@ -31,11 +32,11 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: false,
+      jsx: true,
     },
     warnOnUnsupportedTypeScriptVersion: false,
   },
-  ignorePatterns: ['@generated/**', '*.config.js', '.*rc.js'],
+  ignorePatterns: ['@generated/**', '*.config.[cm]js', '.*rc.[cm]js'],
   rules: {
     // core
     'consistent-return': [1, { treatUndefinedAsUnspecified: true }],
@@ -86,10 +87,33 @@ module.exports = {
         project: ['./tsconfig.json'],
       },
     },
+    tailwindcss: {
+      // These are the default values but feel free to customize
+      callees: ['classnames', 'clsx', 'ctl', 'cn', 'cva'],
+      config: 'tailwind.config.js', // returned from `loadConfig()` utility if not provided
+      cssFiles: [
+        '**/*.css',
+        '!**/node_modules',
+        '!**/.*',
+        '!**/dist',
+        '!**/build',
+      ],
+      cssFilesRefreshRate: 5_000,
+      removeDuplicates: true,
+      skipClassAttribute: false,
+      whitelist: [],
+      tags: [], // can be set to e.g. ['tw'] for use in tw`bg-blue`
+      classRegex: '^class(Name)?$', // can be modified to support custom attributes. E.g. "^tw$" for `twin.macro`
+    },
   },
   overrides: [
     {
-      files: ['*.spec.ts', '**/testing/**/*.ts'],
+      files: [
+        '*.spec.tsx',
+        '*.spec.ts',
+        '**/testing/**/*.ts',
+        '**/testing/**/*.tsx',
+      ],
       rules: {
         'consistent-return': 0,
         'max-lines': 0,
