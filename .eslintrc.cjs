@@ -5,7 +5,6 @@ module.exports = {
     browser: true,
   },
   plugins: [
-    'perfectionist',
     'unicorn',
     'import',
     'wix-editor',
@@ -17,7 +16,6 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:perfectionist/recommended-alphabetical',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:unicorn/recommended',
@@ -78,7 +76,6 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-condition': 1,
     '@typescript-eslint/no-explicit-any': [1, { ignoreRestArgs: true }],
   },
-
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
