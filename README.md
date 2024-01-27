@@ -2,9 +2,12 @@
 
 ## Stack
 
+- Vite
 - React
 - shadcn/ui
 - TailwindCSS
+- ESLint
+- Prettier
 
 ## Installation
 
