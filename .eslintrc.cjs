@@ -62,11 +62,8 @@ module.exports = {
       1,
       {
         replacements: {
+          props: false,
           args: false,
-          err: false,
-          prod: false,
-          ref: false,
-          params: false,
         },
       },
     ],
