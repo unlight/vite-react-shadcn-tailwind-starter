@@ -15,6 +15,10 @@
 yarn
 ```
 
+```sh
+npx shadcn-ui@latest add -o form input button avatar sonner hover-card
+```
+
 ## Tasks
 
 | Command          | Description                                 |
