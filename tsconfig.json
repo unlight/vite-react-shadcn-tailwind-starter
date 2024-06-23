@@ -28,6 +28,7 @@
     "lib": ["DOM", "esnext"],
     "baseUrl": ".",
     "paths": {
+      "@/lib/utils": ["./src/utils/index"],
       "@/*": ["./src/*"]
     },
     "plugins": [],

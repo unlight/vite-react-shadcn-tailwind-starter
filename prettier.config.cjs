@@ -5,7 +5,6 @@ module.exports = {
   semi: true,
   singleQuote: true,
   arrowParens: 'avoid',
-  pluginSearchDirs: false,
   plugins: [
     'prettier-plugin-tailwindcss', // must be loaded last
   ],

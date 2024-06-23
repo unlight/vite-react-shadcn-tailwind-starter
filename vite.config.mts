@@ -16,6 +16,7 @@ export default function ({}: ConfigEnv): UserConfigExport {
     plugins: [tsconfigPaths(), reactRefresh()],
     resolve: {
       alias: {
+        '@/lib/utils': path.resolve(__dirname, './src/utils/index.ts'),
         '@': path.resolve(__dirname, './src'),
       },
     },
