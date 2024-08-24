@@ -1,13 +1,12 @@
-import './App.css';
+import './app.css';
 
 import React from 'react';
 
 import { Toaster } from '@/components/ui/sonner';
-
-import { ComboboxDemo } from './combo-box';
-import { HoverCardDemo } from './HoverCardDemo';
-import { InputForm } from './InputForm';
-import { SonnerDemo } from './SonnerDemo';
+import { HoverCardDemo } from './components/hover-card-demo';
+import { ComboboxDemo } from './components/combo-box';
+import { SonnerDemo } from './components/sonner-demo';
+import { InputForm } from './components/input-form';
 
 export function App() {
   return (
